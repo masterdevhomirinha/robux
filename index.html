@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #parabensButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #parabensButton:hover {
+            background-color: #2980b9;
+        }
+
+        #balao {
+            display: none;
+            position: absolute;
+            background-color: #f1c40f;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transform: translateY(-50%);
+        }
+    </style>
+    <script>
+        function mostrarBalao() {
+            const balao = document.getElementById("balao");
+            balao.style.display = "block";
+            setTimeout(() => {
+                balao.style.display = "none";
+            }, 3000); // Esconde o balão após 3 segundos
+        }
+    </script>
+</head>
+<body>
+    <h1>Parabéns, você ganhou 100 Robux!</h1>
+    <button id="parabensButton" onclick="mostrarBalao()">Clique aqui</button>
+    <div id="balao">
+        <p>🎉 Parabéns! 🎉</p>
+    </div>
+</body>
+</html>
